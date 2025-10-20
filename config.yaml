@@ -1,0 +1,23 @@
+watch_dir: ./examples/simple_project
+file_patterns: ['*.py']
+llm:
+  provider: lmstudio  # or grok, openai, anthropic
+  model: google/gemma-3-12b  # Adjust for your LLM
+  url: http://localhost:1234  # For ollama
+  temperature: 0.5
+  max_tokens: 1024
+  api_key: your_key_here  # For online providers
+prompt_template: |
+  Generate concise, structured documentation for the following code in Markdown format. Include these sections:
+  - **Overview**: High-level purpose and how it fits into a larger system.
+  - **Key Components**: Describe main functions/classes, with inputs, outputs, and brief logic.
+  - **Dependencies**: List external libraries (with versions if specified) and internal interdependencies (e.g., imported modules/files, assumptions about other components, or architectural relationships like 'This module calls functions from utils.py for data validation').
+  - **Edge Cases**: Potential issues, assumptions, or error handling.
+  - **Rationale**: Why this implementation (e.g., performance choices, alternatives considered).
+  Keep it under 500 words. Focus on clarity for human review, and explicitly note any inter-file dependencies based on imports or references in the code.
+
+  Code:
+  {code}
+diff_output: true
+notify: console
+dep_depth: shallow

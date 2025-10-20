@@ -1,1 +1,11 @@
 /docs/nppBackup
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.log
+*.env
+docs/  # User-generated docs; ignore if in watched dir
