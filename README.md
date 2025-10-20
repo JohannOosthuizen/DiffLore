@@ -18,7 +18,7 @@ AI-powered code documentation watcher. Automates Markdown generation, semantic d
 ## Installation
 1. Clone the repo:
    ```
-   git clone https://github.com/yourusername/difflore.git
+   git clone https://github.com/JohannOosthuizen/difflore.git
    cd difflore
    ```
 2. Install dependencies:
