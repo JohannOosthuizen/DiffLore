@@ -1,4 +1,4 @@
-watch_dir: ./examples/simple_project
+watch_dir: ./examples/markdown-documentation-viewer
 file_patterns: ['*.py']
 llm:
   provider: lmstudio  # or grok, openai, anthropic
